@@ -1,0 +1,204 @@
+/* ====== BASIC RESET ====== */
+/* This removes default browser margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== BODY STYLING ====== */
+body {
+  font-family: Arial, sans-serif; /* Clean and simple font */
+  background-color: #f7f7f7;     /* Light gray background */
+  color: #333;                   /* Dark text for readability */
+  padding: 20px;
+}
+
+/* ====== HEADER ====== */
+header {
+  text-align: center;  /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+header h1 {
+  font-size: 2em;
+  color: #007bff;      /* Nice blue color */
+}
+
+/* ====== CONTROL SECTION ====== */
+#controls {
+  display: flex;                   /* Align items in a row */
+  justify-content: space-between;  /* Space between search bar & button */
+  align-items: center;             /* Align vertically */
+  margin-bottom: 20px;             /* Space below this section */
+}
+
+#controls input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#controls button:hover {
+  background-color: #0056b3; /* Slightly darker on hover */
+}
+
+/* ====== TABLE STYLING ====== */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes double borders */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f9f9f9; /* Highlight row on hover */
+}
+
+/* ====== BUTTONS INSIDE TABLE ====== */
+button.action-btn {
+  padding: 5px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffc107; /* Yellow */
+  color: black;
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+/* ====== FORM STYLING ====== */
+#userFormSection {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hide the form initially */
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 10px;              /* Add space between fields */
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #555;
+}
+
+form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+form button[type="submit"] {
+  background-color: #28a745; /* Green for save */
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+#cancelBtn {
+  background-color: gray;
+}
+
+#cancelBtn:hover {
+  background-color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+th:hover {
+  color: #007bff;
+}
+
+#paginationControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#paginationControls button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#paginationControls button:hover {
+  background-color: #0056b3;
+}
+
+#rowsPerPage {
+  padding: 5px;
+}

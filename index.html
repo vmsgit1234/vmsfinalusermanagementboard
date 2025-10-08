@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>User Management Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Controls Section -->
+    <section id="controls">
+      <input type="text" id="searchInput" placeholder="Search users...">
+      <button id="addUserBtn">Add User</button>
+    </section>
+
+    <!-- User Table Section -->
+    <section id="userTableSection">
+      <table id="userTable">
+        <thead>
+  <tr>
+    <th data-column="id">ID ⬍</th>
+    <th data-column="firstName">First Name ⬍</th>
+    <th data-column="lastName">Last Name ⬍</th>
+    <th data-column="email">Email ⬍</th>
+    <th data-column="department">Department ⬍</th>
+    <th>Actions</th>
+  </tr>
+</thead>
+        <tbody id="userTableBody">
+          <!-- User rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Pagination Controls -->
+    <section id="paginationControls">
+      <div>
+        <label for="rowsPerPage">Rows per page:</label>
+        <select id="rowsPerPage">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+
+      <div class="pagination-buttons">
+        <button id="prevPageBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPageBtn">Next</button>
+      </div>
+    </section>
+    <section id="userFormSection" class="hidden">
+      <h2 id="formTitle">Add User</h2>
+      <form id="userForm">
+        <label>First Name:
+          <input type="text" id="firstName" required>
+        </label>
+        <label>Last Name:
+          <input type="text" id="lastName" required>
+        </label>
+        <label>Email:
+          <input type="email" id="email" required>
+        </label>
+        <label>Department:
+          <input type="text" id="department" required>
+        </label>
+        <button type="submit">Save</button>
+        <button type="button" id="cancelBtn">Cancel</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
